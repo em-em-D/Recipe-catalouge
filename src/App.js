@@ -11,7 +11,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import withListLoading from './components/listloading';
 import categories from './allCategories';
-import './App.scss';
+
 
 Swiper.use([Navigation, Pagination]);
 

@@ -4,7 +4,7 @@ import {TweenMax, Power3} from 'gsap';
 import Parallax from 'parallax-js';
 import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import './App.scss';
+
 
 const Circle = styled.div`
  width: 115px;
@@ -25,11 +25,12 @@ const List = (props) => {
         return (
           <li key={recipe.idMeal} className='list'>
             <span className='repo-text'>{recipe.strMeal} </span>
-            <img
-            className="round"
-            src={recipe.strMealThumb}
-            alt="Recipe Cover"
-          />
+              <Circle
+                src={recipe.strMealThumb}
+                alt="Recipe Cover"
+              >
+
+              </Circle>
           </li>
         );
       })}
