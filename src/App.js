@@ -1,12 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
-import {TweenMax, Power3} from 'gsap';
+import gsap from 'gsap';
 import styled from 'styled-components';
-import Parallax from 'parallax-js';
 import List from './components/list';
-import back from './images/back.jpg';
-import backping from './images/backping.jpg';
-import peopel from './images/peopel.jpg';
-import strong from './images/strong.jpg';
 import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import withListLoading from './components/listloading';
@@ -21,50 +16,27 @@ const Body = styled.div`
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    font-family: "Roboto";
-    line-style: none;
     box-sizing: border-box;
-    background: #fceade; 
-   filter: brightness(0.9)
-`
-const Section = styled.section`
-  height: 100vh;
-  overflow: hidden;
-`
-//rock1
-const Hg = styled.img`
-  position: absolute !important;
-  width:195vh;
-  height: 50vh;
-  top: 1vh;
-`
-//earth
-// const Stong = styled.img`
-//     width:205vh;
-//     height:50vh;
-//     position: absolute;
-//     left:0;
-//     top:50vh;
-//     z-index: 1;
-//     filter: brightness(0.9);
-// `
-
-const Text = styled.h1`
-  font-family: "AlphaCentauri" !important;
-  font-size: 5vw;
-  color: #ea5d74;
-  letter-spacing:20px;
-  position: absolute;
-  top: 35vh;
-  left:64vh;
+    background: #2a2b2a; 
+   filter: brightness(0.7)
 `
 
-// var scene = document.getElementById('scene');
-//     var parallaxInstance = new Parallax(scene, {
-//       relativeInput: true
-//     });
 
-
+const Container = styled.div`
+position: relative;
+width: 1100px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+padding: 30px;
+`
+const H2 = styled.h2`
+font-family: 'Pacifico', cursive;
+font-size: 50px;
+color: #ffff;
+text-align: center !important;
+`
 function App() {
 
   
@@ -96,27 +68,11 @@ const categoriesResult = [];
     
   
   return (
-   
-    <Body>
-      {/* <Section>
-          <div id="scene">
-             <Hg  src={back} ></Hg>  
-            
-             <div data-depth="0.1" className="veg1">
-              <Stong  src={strong} ></Stong>
-            </div>
-            <div data-depth="0.2" className="veg2">
-              <img src={peopel} ></img>
-            </div>
-            <div data-depth="0.1"className='text'>
-              <Text id="scene">RECIPES</Text>
-             </div> 
-          </div>
-      </Section> */}
-      
-      <div className="circle-container">
-            <ListLoading isLoading={appState.loading} recipes={appState.recipes} />
-      </div>
+    <Body>  
+      <H2>Available recipes</H2>
+        <Container>
+          <ListLoading isLoading={appState.loading} recipes={appState.recipes} />
+        </Container>
     </Body>
   );
 }
