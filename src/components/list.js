@@ -70,20 +70,17 @@ const List = (props) => {
       {recipes.map((recipe) => {
         return (
          
-            <Card >
-                  
+            <Card>
                   <Imagebox>
                         <Picture 
                             src={recipe.strMealThumb}
                          />
                     </Imagebox>
-                    
-                            <Content >
-                                    A recipe is a set of instructions that describes
-                                    how to prepare or make something,
-                                    especially a dish of prepared food.
-                              </Content>
-                     
+                    <Content >
+                         A recipe is a set of instructions that describes
+                         how to prepare or make something,
+                         especially a dish of prepared food.
+                    </Content>
             </Card>
         
         );

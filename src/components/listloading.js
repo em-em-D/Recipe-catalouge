@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import peopel from './../images/peopel.jpg';
-
 const Body = styled.div`
     margin: 0;
     padding: 0;
