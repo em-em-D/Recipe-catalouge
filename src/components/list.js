@@ -17,10 +17,12 @@ const Card = styled.div`
  flex-direction: column;
  box-shadow: 0 5px 202px rgba(0,0,0,0.5);
  transition: 0.5s ease-in-out;
- &:hover {
-   height: 420px;
-   margin-top: -0px !important;
-   transition-delay: 0.1s !important;
+ &:hover .content {
+   height: 280px;
+   margin-top: -40px !important;
+   transition-delay: 0.1s ;
+   visibility: visible;
+   opacity: 1 !important;
  }
  `;
 
@@ -42,21 +44,13 @@ const Picture = styled.img`
 
 const Content = styled.div`
 position: relative;
-font-size: 10px;
 font-family: 'Pacifico', cursive;
 margin-top: -90px;
 padding: 10px 15px;
 text-align: center;
 visibility: hidden;
 transition: 0.3s ease-in-out;
-&:hover {
-   visibility: visible !important;
-   opacity: 1 !important;
-   margin-top: -60px !important;
-   color: red !important;
-   transition-delay: 0.1s !important;
-   z-index: 1000;
- }
+
 `
 // gsap.to("li",{duration: 2.5, autoAlpha:1, repeat: -1, stagger:5})
 const List = (props) => {
@@ -76,7 +70,7 @@ const List = (props) => {
                             src={recipe.strMealThumb}
                          />
                     </Imagebox>
-                    <Content >
+                    <Content className="content">
                          A recipe is a set of instructions that describes
                          how to prepare or make something,
                          especially a dish of prepared food.
