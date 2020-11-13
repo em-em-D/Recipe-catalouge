@@ -50,7 +50,6 @@ padding: 10px 15px;
 text-align: center;
 visibility: hidden;
 transition: 0.3s ease-in-out;
-
 `
 // gsap.to("li",{duration: 2.5, autoAlpha:1, repeat: -1, stagger:5})
 const List = (props) => {
