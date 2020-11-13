@@ -16,7 +16,8 @@ Feel free to contribute if you want to make it better.
 
 Author
 
-Objective
+## Objective
+
 Recipe catalouge is designed to make your search for the perfect meal easy and fun, with its clean and interactive UI. you would find your self lost in your appatitte while surfing through out catalog of recipes.
 Up
 
