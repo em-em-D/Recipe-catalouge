@@ -1,6 +1,6 @@
 Recipe Catalouge
 
-Clean React-Redux Recipe catalouge which displaces the list of available recipes form mealdb api.
+Clean React-Redux Recipe catalouge which display's the list of available recipes form mealdb api.
 Recipes are displayed upon hover of each recipe card.
 ![](recipe.png)
 
