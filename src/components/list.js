@@ -1,8 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import gsap from 'gsap';
-import Parallax from 'parallax-js';
-import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css';
 
 
