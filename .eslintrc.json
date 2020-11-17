@@ -14,8 +14,10 @@
         },
         "ecmaVersion": 12
     },
+    
     "plugins": ["react"],
     "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb"],
     "rules": {
+        "linebreak-style": ["error", "windows"]
     }
 }

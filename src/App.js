@@ -20,7 +20,6 @@ const Container = styled.div`
   position: relative;
   width: 1100px;
   display: flex;
-  left: 200px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -46,9 +45,6 @@ function App() {
       fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category} `)
         .then((res) => res.json())
         .then((res) => {
-          // console.log('r', res )
-          // console.log('l',categoriesResult.length)
-          // console.log('c',categoriesResult)
           setAppState({ loading: false, recipes: categoriesResult });
           categoriesResult.push(...res.meals);
         });
