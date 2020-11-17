@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import withListLoading from "./components/listloading";
+import List from "./components/list";
 import categories from "./allCategories";
 
 const Body = styled.div`
