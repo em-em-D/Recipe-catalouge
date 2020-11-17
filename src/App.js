@@ -1,13 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
-import gsap from "gsap";
 import styled from "styled-components";
-import Swiper, { Navigation, Pagination } from "swiper";
-import List from "./components/list";
-import "swiper/swiper-bundle.css";
+import PropTypes from "prop-types";
 import withListLoading from "./components/listloading";
 import categories from "./allCategories";
-
-Swiper.use([Navigation, Pagination]);
 
 const Body = styled.div`
   margin: 0;
@@ -68,4 +63,8 @@ function App() {
     </Body>
   );
 }
+
+React.forwardRef.propTypes = {
+  categories: PropTypes.array,
+};
 export default App;

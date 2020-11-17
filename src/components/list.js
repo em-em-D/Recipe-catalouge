@@ -1,9 +1,5 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import gsap from "gsap";
-import Parallax from "parallax-js";
-import Swiper, { Navigation, Pagination } from "swiper";
-import "swiper/swiper-bundle.css";
 
 const Card = styled.div`
   max-width: 300px;
@@ -47,26 +43,24 @@ const Content = styled.div`
   visibility: hidden;
   transition: 0.3s ease-in-out;
 `;
-// gsap.to("li",{duration: 2.5, autoAlpha:1, repeat: -1, stagger:5})
+
 const List = (props) => {
   const { recipes } = props;
   console.log("rs", recipes);
   if (!recipes || recipes.length === 0) return <p>No repcipes, sorry</p>;
   return (
     <>
-      {recipes.map((recipe) => {
-        return (
-          <Card>
-            <Imagebox>
-              <Picture src={recipe.strMealThumb} />
-            </Imagebox>
-            <Content className="content">
-              A recipe is a set of instructions that describes how to prepare or
-              make something, especially a dish of prepared food.
-            </Content>
-          </Card>
-        );
-      })}
+      {recipes.map((recipe) => (
+        <Card>
+          <Imagebox>
+            <Picture src={recipe.strMealThumb} />
+          </Imagebox>
+          <Content className="content">
+            A recipe is a set of instructions that describes how to prepare or
+            make something, especially a dish of prepared food.
+          </Content>
+        </Card>
+      ))}
     </>
   );
 };

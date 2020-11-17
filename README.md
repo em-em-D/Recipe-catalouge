@@ -36,9 +36,11 @@ Up
 Live version
 A live version is hosted on Github.
 
-Recipe-catalouge @ heroku
+https://em-em-d.github.io/Recipe-catalouge/
+
 How to Install and Run in Your Computer
-To run the scripts npm is required. To get npm you have to install Node.js. Follow the installation instructions for your system Mac, Linux or Windows.
+
+To run the scripts npm or yarn is required. To get npm you have to install Node.js. Follow the installation instructions for your system Mac, Linux or Windows.
 
 Use your terminal and run the commands after each instruction.
 
