@@ -1,9 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
-import gsap from 'gsap';
 import styled from 'styled-components';
 import List from './components/list';
-import Swiper, { Navigation, Pagination } from 'swiper';
-import 'swiper/swiper-bundle.css';
 import withListLoading from './components/listloading';
 import categories from './allCategories';
 
@@ -26,7 +23,6 @@ const Container = styled.div`
 position: relative;
 width: 1100px;
 display: flex;
-left: 250px;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
