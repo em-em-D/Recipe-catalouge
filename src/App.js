@@ -26,6 +26,7 @@ const Container = styled.div`
 position: relative;
 width: 1100px;
 display: flex;
+left: 250px;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
