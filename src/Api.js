@@ -1,10 +1,10 @@
 class ApiRequest {
   api() {
-    return fetch(
-      `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category} `
-    ).then((response) => {
-      return response.json();
-    });
+    return fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c `).then(
+      (response) => {
+        return response.json();
+      }
+    );
   }
 }
 

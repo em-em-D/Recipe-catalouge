@@ -46,7 +46,7 @@ const Content = styled.div`
 
 const List = (props) => {
   const { recipes } = props;
-  console.log("rs", recipes);
+  // console.log("rs", recipes);
   if (!recipes || recipes.length === 0) return <p>No repcipes, sorry</p>;
   return (
     <>
