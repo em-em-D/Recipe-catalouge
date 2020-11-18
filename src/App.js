@@ -3,7 +3,11 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import withListLoading from "./components/listloading";
 import List from "./components/list";
+import Header from "./components/header";
+import About from "../pages/about";
 import categories from "./allCategories";
+import history from "./services/history";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Body = styled.div`
   margin: 0;
@@ -52,12 +56,19 @@ function App() {
   }, [setAppState]);
 
   return (
-    <Body>
-      <H2>Available recipes</H2>
-      <Container>
-        <ListLoading isLoading={appState.loading} recipes={appState.recipes} />
-      </Container>
-    </Body>
+    <Router>
+      <Body>
+        <Header />
+        <H2>Available recipes</H2>
+        <Container>
+          <ListLoading
+            isLoading={appState.loading}
+            recipes={appState.recipes}
+          />
+        </Container>
+        <Route path="/about" exact component={About} />
+      </Body>
+    </Router>
   );
 }
 

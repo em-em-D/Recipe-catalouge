@@ -1,15 +1,10 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import store from './app/store';
-import App from './App';
+import React from "react";
+import { render } from "@testing-library/react";
+import { Provider } from "react-redux";
+import ApiRequest from "./Api";
 
-test('renders learn react link', () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
-
-  expect(getByText(/learn/i)).toBeInTheDocument();
+it("Api testing", async function () {
+  const response = new ApiRequest();
+  var data = await response.api();
+  expect(data.category[0].id).toEqual("1");
 });
